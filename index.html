@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <meta http-equiv="Content-Security-Policy">
+        <script type="text/javascript" src="cordova.js"></script>
+        <!-- jQuery -->
+        <link rel="stylesheet" type="text/css" href="js/jquery-1.5.0.mobile.min.css">
+        <script type="text/javascript" src="js/jquery-1.11.1.min.js" id="cordova-jquery"></script>
+        <script type="text/javascript" id="jqm-trans-disable">
+            /* For having a faster transition */
+            $(document).on("mobileinit", function() {
+                            $.mobile.defaultPageTransition = "none";
+                            $.mobile.defaultDialogTransition = "none";
+            });
+        </script>
+        <script type="text/javascript" src="js/jquery-1.5.0.mobile.min.js"></script>        
+        <script type="text/javascript" src="js/index.js"></script>
+        <title>MegaMax Sale</title>
+    </head>
+    <body>
+        <div class="app">
+	   <h1>MegaMax Sale</h1>
+            <div data-role="controlgroup" data-type="horizontal">
+	   <!-- User Information -->
+                <!--<button type="button" id="test" onclick="app.MegaMax.test()">Test</button>-->
+                Salesperson:
+                <input id="salesperson">
+                ClientID:
+                <form>
+                <select id=client_id>                    
+                </select>
+                </form>                
+            </div>
+            <div data-role="controlgroup" data-type="horizontal">
+	   <!-- Widget navigation buttons -->
+                <button type="button" id="previousWidget" onclick="app.MegaMax.prevWidget()">Prev Widget</button>
+                <button type="button" id="nextWidget" onclick="app.MegaMax.nextWidget()">Next Widget</button>
+	   </div>
+            <div data-role="controlgroup" data-type="horizontal">
+	   <!-- Widget display-->
+                <div id="widgetImage">
+                </div>
+                <div id="widgetDescription">
+                </div>
+	   </div>
+            <div>
+                Number:
+                <input id="number">
+                Agreed Price:
+                <input id="price">
+        </div>
+            <div data-role="controlgroup" data-type="horizontal">
+	   <!-- Order navigation buttons and display -->
+                <button type="button" id="previousOrder" onclick="app.MegaMax.prevOrder()">Prev Order</button>
+                <button type="button" id="nextOrder" onclick="app.MegaMax.nextOrder()">Next Order</button>
+                <button type="button" id="add" onclick="app.MegaMax.add()">Add to Order</button>
+        </div>
+        <button type="button" id="place" onclick="app.MegaMax.place()">Place New Order</button>
+        
+            <!-- Div to show the order -->
+                <div id="client_header">
+                </div>
+                <div id="order_header">
+                </div>
+                <div id="order_items">
+                </div>
+                <div id="total">
+                </div>
+                
+	   <!-- Map canvas -->
+            <div style="width: 400px; height: 400px" id="map_canvas">
+            </div>
+        </div>
+        <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-core.js" charset="utf-8"></script>
+        <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-service.js" charset="utf-8"></script>
+        <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-mapevents.js" charset="utf-8"></script>
+        <script type="text/javascript" src="http://js.api.here.com/v3/3.0/mapsjs-ui.js" charset="utf-8"></script>
+        <script type="text/javascript" src="http://js.api.here.com/v3/3.0/mapsjs-pano.js" charset="utf-8"></script>
+        <link rel="stylesheet" type="text/css" href="http://js.api.here.com/v3/3.0/mapsjs-ui.css" /> 
+    </body>
+</html>
